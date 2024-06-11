@@ -48,11 +48,9 @@ namespace menu {
 
             if (isNumber(line)) {
                 executeItem(std::stoi(line));
-            }
-            else if (line == "x") {
+            } else if (line == "x") {
                 loopShouldRun = false;
-            }
-            else {
+            } else {
                 std::cout << "ERROR: u fkd up" << std::endl;
             }
         }
