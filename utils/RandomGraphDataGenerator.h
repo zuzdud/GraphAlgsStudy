@@ -3,9 +3,13 @@
 //
 
 #pragma once
+#include <tuple>
+#include <vector>
 
-
-
-class RandomGraphDataGenerator {
-
-};
+namespace aizo {
+    class RandomGraphDataGenerator {
+    public:
+        static std::tuple<size_t, size_t, std::vector<size_t> > generate(
+            const float density, const size_t vertexAmount, const size_t maxValue = 1000);
+    };
+}

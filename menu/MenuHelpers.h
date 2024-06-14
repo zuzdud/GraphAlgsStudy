@@ -10,4 +10,6 @@ namespace aizo {
     class IncidenceMatrix;
 
     void readGraphFromFile(std::unique_ptr<IncidenceMatrix> &matrix, std::unique_ptr<AdjacencyList> &list);
+    void generateRandomGraphData(std::unique_ptr<IncidenceMatrix> &matrix, std::unique_ptr<AdjacencyList> &list);
+    void printGraphStructures(std::unique_ptr<IncidenceMatrix> &matrix, std::unique_ptr<AdjacencyList> &list);
 }

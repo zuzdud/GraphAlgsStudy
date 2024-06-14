@@ -42,7 +42,7 @@ namespace menu {
         bool loopShouldRun = true;
         while (loopShouldRun) {
             std::cout << toString() << std::endl;
-            std::cout << exitOption_ << ": type x" << std::endl;
+            std::cout << exitOption_ << ": type x" << std::endl << std::endl;
             std::string line;
             std::getline(std::cin, line);
 

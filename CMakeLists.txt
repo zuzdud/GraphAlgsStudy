@@ -8,12 +8,12 @@ set(CMAKE_EXE_LINKER_FLAGS "-static")
 
 
 add_executable(GraphAlgsStudy main.cpp
-        menu_structures/MenuItem.cpp
-        menu_structures/MenuItem.h
-        menu_structures/Menu.cpp
-        menu_structures/Menu.h
-        menu_creator.h
-        menu_creator.cpp
+        menu/menu_structures/MenuItem.cpp
+        menu/menu_structures/MenuItem.h
+        menu/menu_structures/Menu.cpp
+        menu/menu_structures/Menu.h
+        menu/MenuCreator.h
+        menu/MenuCreator.cpp
         graph_structures/IncidenceMatrix.cpp
         graph_structures/IncidenceMatrix.h
         graph_structures/AdjacencyList.cpp
@@ -31,11 +31,13 @@ add_executable(GraphAlgsStudy main.cpp
         graph_structures/Edge.cpp
         utils/GraphReader.cpp
         utils/GraphReader.h
-        MstMenu.cpp
-        MstMenu.h
-        MenuHelpers.cpp
-        MenuHelpers.h
+        menu/MstMenu.cpp
+        menu/MstMenu.h
+        menu/MenuHelpers.cpp
+        menu/MenuHelpers.h
         utils/RandomGraphDataGenerator.cpp
         utils/RandomGraphDataGenerator.h
+        menu/ShortestPathMenu.cpp
+        menu/ShortestPathMenu.h
 )
 
