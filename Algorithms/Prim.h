@@ -7,10 +7,12 @@
 #include "../graph_structures/IncidenceMatrix.h"
 
 
-class Prim {
-public:
+namespace aizo {
+    class Prim {
+    public:
 
-    void findMinimumSpanningTree(IncidenceMatrix incidenceMatrix);
+        void findMinimumSpanningTree(IncidenceMatrix incidenceMatrix);
 
-    void findMinimumSpanningTree(AdjacencyList adjacencyList);
-};
+        void findMinimumSpanningTree(AdjacencyList adjacencyList);
+    };
+}

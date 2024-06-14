@@ -39,12 +39,13 @@
 //
 // };
 
-int main() {
-    // int verticesNumber, edgesNumber;
-    // getGraphInfo('test.txt', verticesNumber, edgesNumber);
-    // displayMatrix(verticesNumber, edgesNumber, matrix[]);
 
-    mainMenu();
+    int main() {
+        // int verticesNumber, edgesNumber;
+        // getGraphInfo('test.txt', verticesNumber, edgesNumber);
+        // displayMatrix(verticesNumber, edgesNumber, matrix[]);
 
-    return 0;
-}
+        aizo::mainMenu();
+
+        return 0;
+    }

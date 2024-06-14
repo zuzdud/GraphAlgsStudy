@@ -4,7 +4,6 @@
 
 #pragma once
 
-#include <istream>
 #include <string>
 #include <vector>
 
@@ -27,6 +26,4 @@ namespace menu {
 
         void execute() const;
     };
-
-    std::iostream operator<<(const std::iostream &stream, const Menu &menu);
 } // menu

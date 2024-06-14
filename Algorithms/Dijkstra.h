@@ -7,10 +7,12 @@
 #include "../graph_structures/AdjacencyList.h"
 #include "../graph_structures/IncidenceMatrix.h"
 
-class Dijkstra {
-public:
+namespace aizo {
+    class Dijkstra {
+    public:
 
-    void findShortestPath(IncidenceMatrix incidenceMatrix, int startVertex, int endVertex);
+        void findShortestPath(IncidenceMatrix incidenceMatrix, int startVertex, int endVertex);
 
-    void findShortestPath(AdjacencyList adjacencyList, int startVertex, int endVertex);
-};
+        void findShortestPath(AdjacencyList adjacencyList, int startVertex, int endVertex);
+    };
+}

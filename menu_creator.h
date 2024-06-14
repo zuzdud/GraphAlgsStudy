@@ -4,6 +4,7 @@
 
 #pragma once
 
-void mainMenu();
-void mstMenu();
-void shortestPathMenu();
+namespace aizo {
+    void mainMenu();
+    void shortestPathMenu();
+}

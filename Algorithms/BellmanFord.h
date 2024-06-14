@@ -7,11 +7,13 @@
 #include "../graph_structures/AdjacencyList.h"
 #include "../graph_structures/IncidenceMatrix.h"
 
-class BellmanFord {
+namespace aizo {
+    class BellmanFord {
 
-public:
-    void findShortestPath(IncidenceMatrix incidenceMatrix, int startVertex, int endVertex);
+    public:
+        void findShortestPath(IncidenceMatrix incidenceMatrix, int startVertex, int endVertex);
 
-    void findShortestPath(AdjacencyList adjacencyList, int startVertex, int endVertex);
+        void findShortestPath(AdjacencyList adjacencyList, int startVertex, int endVertex);
 
-};
+    };
+}

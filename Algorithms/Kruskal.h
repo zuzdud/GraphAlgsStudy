@@ -7,10 +7,12 @@
 #include "../graph_structures/AdjacencyList.h"
 #include "../graph_structures/IncidenceMatrix.h"
 
-class Kruskal {
-public:
+namespace aizo {
+    class Kruskal {
+    public:
 
-    void findMinimumSpanningTree(IncidenceMatrix incidenceMatrix);
+        void findMinimumSpanningTree(IncidenceMatrix incidenceMatrix);
 
-    void findMinimumSpanningTree(AdjacencyList adjacencyList);
-};
+        void findMinimumSpanningTree(AdjacencyList adjacencyList);
+    };
+}
