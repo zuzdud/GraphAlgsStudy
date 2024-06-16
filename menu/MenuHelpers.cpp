@@ -8,6 +8,7 @@
 #include "../graph_structures/AdjacencyList.h"
 #include "../graph_structures/IncidenceMatrix.h"
 #include "../utils/RandomGraphDataGenerator.h"
+#include "../algorithms/Prim.h"
 
 
 namespace aizo {
@@ -65,5 +66,17 @@ namespace aizo {
             list->print(std::cout);
         }
     }
+
+    void runPrimAlgorithm(const std::unique_ptr<IncidenceMatrix> &matrix, const std::unique_ptr<AdjacencyList> &list) {
+        std::cout << "Matrix:" << std::endl;
+        const auto matrixMst = Prim::generateMst(matrix);
+        matrixMst->print(std::cout);
+
+        std::cout << "List:" << std::endl;
+        const auto listMst = Prim::generateMst(list);
+        listMst->print(std::cout);
+
+    }
+
 
 }

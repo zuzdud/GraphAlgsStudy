@@ -10,7 +10,7 @@
 namespace aizo {
     class Edge {
     public:
-        Edge(const size_t origin, const size_t destination, const size_t weight)
+        Edge(size_t origin, size_t destination, size_t weight)
             : previous_(nullptr), next_(nullptr), origin_(origin), destination_(destination), weight_(weight) {
         }
 
@@ -44,8 +44,8 @@ namespace aizo {
     private:
         std::shared_ptr<Edge> previous_;
         std::shared_ptr<Edge> next_;
-        const size_t origin_;
-        const size_t destination_;
-        const size_t weight_;
+         size_t origin_;
+         size_t destination_;
+         size_t weight_;
     };
 } // aizo
