@@ -4,6 +4,7 @@
 
 #include "MenuHelpers.h"
 
+#include "../algorithms/BellmanFord.h"
 #include "../utils/GraphReader.h"
 #include "../graph_structures/AdjacencyList.h"
 #include "../graph_structures/IncidenceMatrix.h"
@@ -115,6 +116,39 @@ namespace aizo {
         totalWeight = 0;
         std::cout << std::endl << "List:" << std::endl;
         const auto listPath = Dijkstra::findShortestPath(list, startVertex, endVertex);
+        for (const auto &edge: listPath) {
+            std::cout << edge.getOrigin() << "<--" << edge.getDestination() << " [" << edge.getWeight() << "] | ";
+            totalWeight += edge.getWeight();
+        }
+        std::cout << std::endl << "Total weight: " << totalWeight << std::endl;
+    }
+
+    void runBellmanAlgorithm(const std::unique_ptr<IncidenceMatrix> &matrix,
+                              const std::unique_ptr<AdjacencyList> &list) {
+        std::cout << "Enter start vertex: ";
+        size_t startVertex;
+        std::cin >> startVertex;
+        std::cin.clear();
+        std::cin.sync();
+
+        std::cout << "Enter end vertex: ";
+        size_t endVertex;
+        std::cin >> endVertex;
+        std::cin.clear();
+        std::cin.sync();
+
+        size_t totalWeight = 0;
+        std::cout << "Structure: matrix" << std::endl;
+        const auto matrixPath = BellmanFord::findShortestPath(matrix, startVertex, endVertex);
+        for (const auto &edge: matrixPath) {
+            std::cout << edge.getOrigin() << "<--" << edge.getDestination() << " [" << edge.getWeight() << "] | ";
+            totalWeight += edge.getWeight();
+        }
+        std::cout << std::endl << "Total weight: " << totalWeight << std::endl;
+
+        totalWeight = 0;
+        std::cout << std::endl << "List:" << std::endl;
+        const auto listPath = BellmanFord::findShortestPath(list, startVertex, endVertex);
         for (const auto &edge: listPath) {
             std::cout << edge.getOrigin() << "<--" << edge.getDestination() << " [" << edge.getWeight() << "] | ";
             totalWeight += edge.getWeight();

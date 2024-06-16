@@ -44,8 +44,8 @@ namespace aizo {
     private:
         std::shared_ptr<Edge> previous_;
         std::shared_ptr<Edge> next_;
-         size_t origin_;
-         size_t destination_;
-         size_t weight_;
+        size_t origin_;
+        size_t destination_;
+        size_t weight_;
     };
 } // aizo

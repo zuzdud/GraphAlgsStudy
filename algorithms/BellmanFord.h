@@ -9,11 +9,9 @@
 
 namespace aizo {
     class BellmanFord {
-
     public:
-        void findShortestPath(IncidenceMatrix incidenceMatrix, int startVertex, int endVertex);
+        static std::vector<Edge> findShortestPath(const std::unique_ptr<IncidenceMatrix> &incidenceMatrix, size_t from, size_t to);
 
-        void findShortestPath(AdjacencyList adjacencyList, int startVertex, int endVertex);
-
+        static std::vector<Edge> findShortestPath(const std::unique_ptr<AdjacencyList> &adjacencyList, size_t from, size_t to);
     };
 }

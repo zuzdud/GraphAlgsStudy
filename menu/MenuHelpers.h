@@ -22,4 +22,7 @@ namespace aizo {
 
     void runDijkstraAlgorithm(const std::unique_ptr<IncidenceMatrix> &matrix,
                              const std::unique_ptr<AdjacencyList> &list);
+
+    void runBellmanAlgorithm(const std::unique_ptr<IncidenceMatrix> &matrix,
+                             const std::unique_ptr<AdjacencyList> &list);
 }
