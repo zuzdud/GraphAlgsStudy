@@ -20,7 +20,8 @@ namespace aizo {
             menu::MenuItem(2, "Generate random graph", [&matrix, &list]() { generateRandomGraphData(matrix, list); }),
             menu::MenuItem(3, "Display graph", [&matrix, &list]() { printGraphStructures(matrix, list); }),
             menu::MenuItem(4, "Solve using Prim algorithm", [&matrix, &list]() { runPrimAlgorithm(matrix, list); }),
-            menu::MenuItem(5, "Solve using Kruskal algorithm", []() { std::cout << "kruskla" << std::endl; })
+            menu::MenuItem(5, "Solve using Kruskal algorithm",
+                           [&matrix, &list]() { runKruskalAlgorithm(matrix, list); })
         };
         const menu::Menu mstMenu("Minimum spanning tree menu", "Back", mstMenuItems);
         mstMenu.execute();

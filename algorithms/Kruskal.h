@@ -10,9 +10,8 @@
 namespace aizo {
     class Kruskal {
     public:
+        static std::unique_ptr<IncidenceMatrix> generateMst(const std::unique_ptr<IncidenceMatrix> &incidenceMatrix);
 
-        void findMinimumSpanningTree(IncidenceMatrix incidenceMatrix);
-
-        void findMinimumSpanningTree(AdjacencyList adjacencyList);
+        static std::unique_ptr<AdjacencyList> generateMst(const std::unique_ptr<AdjacencyList> &adjacencyList);
     };
 }
