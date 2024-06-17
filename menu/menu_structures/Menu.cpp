@@ -42,17 +42,15 @@ namespace menu {
         bool loopShouldRun = true;
         while (loopShouldRun) {
             std::cout << toString() << std::endl;
-            std::cout << exitOption_ << ": type x" << std::endl;
+            std::cout << exitOption_ << ": type x" << std::endl << std::endl;
             std::string line;
             std::getline(std::cin, line);
 
             if (isNumber(line)) {
                 executeItem(std::stoi(line));
-            }
-            else if (line == "x") {
+            } else if (line == "x") {
                 loopShouldRun = false;
-            }
-            else {
+            } else {
                 std::cout << "ERROR: u fkd up" << std::endl;
             }
         }
